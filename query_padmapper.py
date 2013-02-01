@@ -4,19 +4,19 @@ import urllib
 import json
 import time
 
-MIN_LAT=32.4147
-MAX_LAT=33.4147
-MIN_LON=-111.9086
-MAX_LON=-110.9086
+MIN_LAT=33.0158
+MAX_LAT=33.8359
+MIN_LON=-113.2223
+MAX_LON=-110.6577
 
-MAX_RENT=6050
+MAX_RENT=3000
 
 DEFAULTS = {
     'cities': 'false',
     'showPOI': 'false',
     'limit': 2000,
     'minRent': 0,
-    'maxRent': 6000,
+    'maxRent': 3000,
     'searchTerms': '',
     'maxPricePerBedroom': 6000,
     'minBR': 0,
