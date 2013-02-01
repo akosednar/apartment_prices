@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<style type="text/css">
+	html{
+		height:100%;
+	}
+	body {
+		overflow: hidden;
+		font-family: sans-serif;
+	}
+	#map {
+	top: 0;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	}
+	#legend{
+		position:absolute;
+		bottom:30px;
+		left:20px;
+		background:#fff;
+		border-style:solid;
+		border-width:1px;
+		padding:4px;
+		font-size:14px;
+	}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+ 	<!--[if lte IE 8]>
+    	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" href="http://kartena.github.com/Leaflet.Pancontrol/lib/Leaflet.Pancontrol/src/L.Control.Pan.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+    <script src="http://kartena.github.com/Leaflet.Pancontrol/lib/Leaflet.Pancontrol/src/L.Control.Pan.js"></script>
+	<script>
+	function map_init(){
+		var map = L.map('map').setView([33.41,-111.90], 13);
+		//var map = L.map('map').setView([41.8239891,-71.4128343], 13);
+		L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',maxZoom: 18}).addTo(map);
+
+		var imageUrl = 'apts.png',
+    		imageBounds = [[33.0158,-113.2223], [33.8359,-110.6577]];
+
+		L.imageOverlay(imageUrl, imageBounds,{opacity: 0.4}).addTo(map);
+		
+	}
+	</script>	
+ </head>
+ <body onload="map_init()">
+ 	<div id="map"></div>
+  	<div id="legend">
+  		<b>$/bedroom</b>
+  		<br /><br />  
+  		<font color="#FF0000">&#9608;</font> $1800+<br>
+  		<font color="#FF2B00">&#9608;</font> $1700+<br>
+  		<font color="#FF5600">&#9608;</font> $1600+<br>
+  		<font color="#FF7F00">&#9608;</font> $1500+<br>
+  		<font color="#FFAB00">&#9608;</font> $1400+<br>
+  		<font color="#FFD500">&#9608;</font> $1300+<br>
+  		<font color="#FFFF00">&#9608;</font> $1200+<br>
+  		<font color="#7FFF00">&#9608;</font> $1100+<br>
+  		<font color="#00FF00">&#9608;</font> $1000+<br>
+  		<font color="#00FF7F">&#9608;</font> $900+<br>
+  		<font color="#00FFFF">&#9608;</font> $800+<br>
+  		<font color="#00D5FF">&#9608;</font> $700+<br>
+  		<font color="#00ABFF">&#9608;</font> $600+<br>
+  		<font color="#007FFF">&#9608;</font> $500+<br>
+  		<font color="#0056FF">&#9608;</font> $400+<br>
+  		<font color="#002BFF">&#9608;</font> $300+<br>
+  		<font color="#0000FF">&#9608;</font> $300-<br>
+  		<br />
+  		From 1/2013 <br /><br />
+  		<a href="https://github.com/akosednar/apartment_prices">(Github)</a><br />
+  	</div>
+</body>
+</html>
