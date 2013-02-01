@@ -20,7 +20,7 @@ DEFAULTS = {
     'searchTerms': '',
     'maxPricePerBedroom': 6000,
     'minBR': 0,
-    'maxBR': 10,
+    'maxBR': 7,
     'minBA': 1,
     'maxAge': 7,
     'imagesOnly': 'false',
