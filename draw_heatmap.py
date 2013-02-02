@@ -110,35 +110,35 @@ def color(val):
     if val is None:
         return (255,255,255,0)
 
-    if val > 1800:
+    if val > 1200:
         return (255, 0, 0) # red
-    elif val > 1700:
-        return (255, 43, 0) # redorange
-    elif val > 1600:
-        return (255, 86, 0) # orangered
-    elif val > 1500:
-        return (255, 127, 0) # orange
-    elif val > 1400:
-        return (255, 171, 0) # orangeyellow
-    elif val > 1300:
-        return (255, 213, 0) # yelloworange
-    elif val > 1200:
-        return (255, 255, 0) # yellow
     elif val > 1100:
-        return (127, 255, 0) # lime green
+        return (255, 43, 0) # redorange
+    elif val > 1050:
+        return (255, 86, 0) # orangered
     elif val > 1000:
-        return (0, 255, 0) # green
+        return (255, 127, 0) # orange
+    elif val > 950:
+        return (255, 171, 0) # orangeyellow
     elif val > 900:
-        return (0, 255, 127) # teal
-    elif val > 800:
-        return (0, 255, 255) # light blue
+        return (255, 213, 0) # yelloworange
+    elif val > 850:
+        return (255, 255, 0) # yellow
     elif val > 700:
-        return (0, 213, 255) # medium light blue
+        return (127, 255, 0) # lime green
+    elif val > 650:
+        return (0, 255, 0) # green
     elif val > 600:
-        return (0, 171, 255) # light medium blue
+        return (0, 255, 127) # teal
+    elif val > 550:
+        return (0, 255, 255) # light blue
     elif val > 500:
-        return (0, 127, 255) # medium blue
+        return (0, 213, 255) # medium light blue
+    elif val > 450:
+        return (0, 171, 255) # light medium blue
     elif val > 400:
+        return (0, 127, 255) # medium blue
+    elif val > 350:
         return (0, 86, 255) # medium dark blue
     elif val > 300:
         return (0, 43, 255) # dark medium blue
